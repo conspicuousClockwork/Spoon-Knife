@@ -8,4 +8,6 @@ After forking this repository, you can make some changes to the project, and sub
 
 For some more information on how to fork a repository, [check out our guide, "Forking Projects""](http://guides.github.com/overviews/forking/). Thanks! :sparkling_heart:
 
-charCount = (num) => [...num].reverse().reduce((ac, ch) => ((ac[1] && ac[0].push(ch)) || (((ch.charCodeAt()+1 <= 90) && (ac[0].push(String.fromCharCode(ch.charCodeAt()+1)) && (ac[1] = true))) || (ac[0].push('A') && ((ac[0].length === num.length && ac[0].push('A')) || true)))) && ac,[[], false])[0].reverse().join('');
+counter = (x) => [...x].reverse().reduce((a, c) => ((a[1] && a[0].push(c)) || (((c.charCodeAt()+1 <= 90) && (a[0].push(String.fromCharCode(c.charCodeAt()+1)) && (a[1] = true))) || (a[0].push('A') && ((a[0].length === x.length && a[0].push('A')) || true)))) && a,[[], false])[0].reverse().join('');
+
+
